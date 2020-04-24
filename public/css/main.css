@@ -1,15 +1,245 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@charset "UTF-8";
 
+/*!
+ * Instagram Mobile First
+ * @author Vinicius Menezes
+ */
+
+/*!
+ * The summary style
+ * 1) - IMPORT
+ * 2) - GLOBAL
+ * 3) - RESET
+ * 4) - STYLE
+ */
+
+/* ========== IMPORT ========== */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+/* ========== IMPORT ========== */
+
+/* ========== GLOBAL ========== */
 *,
 *:after,
 *:before {
 	box-sizing: border-box;
 }
 
+:root {
+	--color-white: white;
+	--color-black: black;
+	--color-background: #fafafa;
+	--color-gradient-start: rgba(245, 160, 77, 1);
+	--color-gradient-end: rgba(160, 15, 139, 1);
+}
+/* ========== GLOBAL ========== */
 
+/* ========== RESET ========== */
+a {
+	text-decoration: none;
+	color: inherit;
+}
 
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+/* ========== RESET ========== */
 
+/* ========== STYLE ========== */
+html {
+	font-size: 10px;
+}
 
+body {
+	font-family: "Open Sans", sans-serif;
+	background-color: var(--color-background);
+	color: var(--color-black);
+}
 
+a {
+	text-decoration: none;
+	color: var(--color-black);
+}
 
+.header {
+	width: 100%;
+	background-color: var(--color-white);
+	position: fixed;
+	padding: 8px 16px;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+	top: 0;
+}
 
+.container {
+	width: 100%;
+	margin: 0 auto;
+}
+
+@media screen and (min-width: 728px) {
+	.container {
+		width: 728px;
+	}
+}
+
+.header .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__logo {
+	display: inline-block;
+	height: 40px;
+}
+
+.header__logo img {
+	height: 100%;
+}
+
+.header__icon {
+	color: var(--color-black);
+	display: inline-block;
+	padding: 1px 6px;
+	font-size: 16px;
+}
+
+.stories {
+	display: flex;
+	padding: 16px 0;
+	margin-top: 56px;
+}
+
+.stories__item {
+	display: flex;
+	place-content: center;
+	margin: 0 8px;
+	padding: 3px;
+	border-radius: 50%;
+}
+
+.stories__item img {
+	height: 72px;
+	width: 72px;
+	border-radius: 50%;
+	border: 2px solid var(--color-white);
+}
+
+.stories__item--new {
+	background: linear-gradient(
+		45deg,
+		var(--color-gradient-start) 0%,
+		var(--color-gradient-end) 100%
+	);
+}
+
+.feed {
+	display: flex;
+	flex-direction: column;
+	padding: 16px;
+}
+
+@media screen and (min-width: 728px) {
+	.feed {
+		padding: 16px 0;
+	}
+}
+
+.post {
+	background-color: var(--color-white);
+	display: flex;
+	flex-direction: column;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+
+.post__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px;
+}
+
+.user {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.user__image {
+	display: flex;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	margin-right: 8px;
+}
+
+.user__image img {
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+}
+
+.user__name {
+	color: var(--color-black);
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.post__header-options {
+	font-size: 1.4rem;
+	padding: 1px 6px;
+}
+
+.post__image {
+	margin: 0;
+	height: auto;
+	width: 100%;
+}
+
+.post__image img {
+	width: 100%;
+}
+
+.post__controls {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 4px 0;
+}
+
+.post__control {
+	font-size: 2.4rem;
+	margin: 0 8px;
+	padding: 0 6px;
+}
+
+.post__control:last-of-type {
+	justify-self: flex-end;
+	margin-left: auto;
+}
+
+.post__status {
+	display: flex;
+	padding: 8px;
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+.post__status .user__image{
+	height: 30px;
+	width: 30px;
+	margin-right: 8px;
+}
+
+.user span{
+	font-size: 1.2rem;
+}
+
+.user span a{
+	font-weight: bold;
+}
+
+/* ========== STYLE ========== */
